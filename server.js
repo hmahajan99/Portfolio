@@ -1,6 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const morgan = require('morgan');
+
+const message = require('./controllers/message');
+const sessions = require('./controllers/sessions');
+
+if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
 require('dotenv').config();
 
@@ -15,52 +21,20 @@ const assistant = new AssistantV2({
   url: process.env.WATSON_URL,
 });
 
+const app = express();
+const port = process.env.PORT || 5000;
 
-assistant.createSession({
-  assistantId: process.env.WATSON_ASSISTANT_ID
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
+app.use(morgan('combined'));
+
+app.get('/', (req, res)=> { res.send("ITS WORKING") });
+app.post('/message', (req, res) => { message.sendMessage(req, res, assistant) });
+app.post('/createsession', (req, res) => { sessions.createSession(req, res, assistant) });
+app.post('/deletesession', (req, res) => { sessions.deleteSession(req, res, assistant) });
+
+app.listen(port, ()=> {
+  console.log(`app is running on port ${port}`);
 })
-  .then(res => {
-    console.log(JSON.stringify(res, null, 2));
-    console.log(res.result.session_id)
-    let session_id = res.result.session_id;
 
-
-    assistant.message({
-      assistantId: process.env.WATSON_ASSISTANT_ID,
-      sessionId: session_id,
-      input: {
-        'message_type': 'text',
-        'text': 'howdy'
-        }
-      })
-      .then(res => {
-        console.log("CHATRES\n",JSON.stringify(res, null, 2));
-        console.log("FINALE\n",res.result.output.generic[0].text)
-
-        assistant.deleteSession({
-          assistantId: process.env.WATSON_ASSISTANT_ID,
-          sessionId: session_id,
-        })
-          .then(res => {
-            console.log("DELETE TOKEN")
-            console.log(JSON.stringify(res, null, 2));
-          })
-          .catch(err => {
-            console.log(err);
-          });
-
-
-      })
-      .catch(err => {
-        console.log(err);
-      });
-    
-
-
-  })
-  .catch(err => {
-    console.log(err);
-  });
-
-
-// app.listen(port, () => console.log(`Listening on port ${port}`))
