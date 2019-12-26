@@ -8,6 +8,7 @@ import "./ChatContainer.scss";
 function ChatContainer () {
   const [chatOpen, toggleChat] = useState(false);
   return (
+    // fix on click
     <div className="chat-container" onClick={()=>toggleChat(!chatOpen)}>
       {chatOpen && <ChatBox />}
       <ChatButton />

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "client": "cd client && npm start",
-    "server": "nodemon server.js"
+    "server": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,8 @@
     "cors": "2.8.5",
     "dotenv": "7.0.0",
     "express": "^4.16.4",
-    "express-sslify": "^1.2.0"
+    "express-sslify": "^1.2.0",
+    "ibm-watson": "^5.2.1"
   },
   "devDependencies": {
     "concurrently": "^4.0.1",
