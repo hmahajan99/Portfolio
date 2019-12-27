@@ -1,7 +1,40 @@
 .chat-box {
+
+  background-color: #FF8F5E;
+  border-radius: 20px;
+  color: #fff;
+  height: 75vh;
+  max-height: 550px;
+  width: 80vw;
+  max-width: 350px;
+  padding: 30px;
+
   position: fixed;
-  margin-bottom: 0px;
   bottom: 40px;
   right: 30px;
   z-index: 100;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:hover {
+    transform: none !important;
+  }
+
+}
+
+.send-button {
+  transition: all 0.1s;
+  cursor: pointer;
+  z-index: 110;
+
+  .grptxt {
+    border: 1px solid black;
+    margin-right: 1px;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }

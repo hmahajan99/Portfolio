@@ -1,85 +1,81 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
-  Button,
   Card,
-  Form,
   Input,
   InputGroupAddon,
   InputGroupText,
-  InputGroup
+  InputGroup,
 } from "reactstrap";
 
 import "./ChatBox.scss";
 
-function ChatBox () {
+function ChatBox ({ addMessage, messages }) {
+
+  const [inputText, setInputText] = useState("Type something...");
+
+  function keyPressed(event) {
+    if (event.key === "Enter") {
+      sendMessage();
+    }
+  }
+
+  function sendMessage(){
+    let message = inputText;
+    fetch('http://localhost:5000/message', {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        "sessionId": "91c5b7dc-35f1-42ef-b83e-d925ba66996e",
+        "message": message
+      })
+    })
+    .then(response => response.json())
+    .then(response => {
+      addMessage({message, from: "user"});
+      addMessage({message: response.reply, from: "bot"});
+    })
+  }
+
   return (
-    <Card className="chat-box card-register">
-      <h3 className="title mx-auto">Welcome</h3>
-      <div className="social-line text-center">
-        <Button
-          className="btn-neutral btn-just-icon mt-0"
-          color="facebook"
-          href="#pablo"
-          onClick={e => e.preventDefault()}
-        >
-          <i className="fa fa-facebook-square" />
-        </Button>
-        <Button
-          className="btn-neutral btn-just-icon mt-0 ml-1"
-          color="google"
-          href="#pablo"
-          onClick={e => e.preventDefault()}
-        >
-          <i className="fa fa-google-plus" />
-        </Button>
-        <Button
-          className="btn-neutral btn-just-icon mt-0 ml-1"
-          color="twitter"
-          href="#pablo"
-          onClick={e => e.preventDefault()}
-        >
-          <i className="fa fa-twitter" />
-        </Button>
+    <Card className="chat-box">
+
+      { messages.length===0 &&
+        <h1 className="title mx-auto">Welcome</h1>
+      }
+
+
+      { messages.length===0 &&
+        // eslint-disable-next-line jsx-a11y/accessible-emoji
+        <h2 className="title mx-auto"> <span style={{fontSize: "200%"}}>😃</span>👇 </h2>
+      }
+
+
+      <div className="msg-history" >
+      MESAGES
       </div>
-      <Form className="register-form">
-        <label>Email</label>
+
+      <div>
         <InputGroup className="form-group-no-border">
-          <InputGroupAddon addonType="prepend">
-            <InputGroupText>
-              <i className="nc-icon nc-email-85" />
+          <InputGroupAddon 
+            addonType="prepend" 
+            className="send-button"
+            onClick={sendMessage} 
+            >
+            <InputGroupText className="grptxt" >
+              <i className="nc-icon nc-send" />
             </InputGroupText>
           </InputGroupAddon>
-          <Input placeholder="Email" type="email" />
+          <Input 
+            type="text" 
+            value={inputText} 
+            onChange={(event)=>setInputText(event.target.value)}  
+            onKeyPress={keyPressed}
+          />
         </InputGroup>
-        <label>Password</label>
-        <InputGroup className="form-group-no-border">
-          <InputGroupAddon addonType="prepend">
-            <InputGroupText>
-              <i className="nc-icon nc-key-25" />
-            </InputGroupText>
-          </InputGroupAddon>
-          <Input placeholder="Password" type="password" />
-        </InputGroup>
-        <Button
-          block
-          className="btn-round"
-          color="danger"
-          type="button"
-        >
-          Register
-        </Button>
-      </Form>
-      <div className="forgot">
-        <Button
-          className="btn-link"
-          color="danger"
-          href="#pablo"
-          onClick={e => e.preventDefault()}
-        >
-          Forgot password?
-        </Button>
       </div>
+
+
     </Card>
   );
 }

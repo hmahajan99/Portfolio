@@ -6,12 +6,24 @@ import ChatBox from "../ChatBox/ChatBox.js";
 import "./ChatContainer.scss";
 
 function ChatContainer () {
-  const [chatOpen, toggleChat] = useState(false);
+
+  // TODO: make a check for invalid session => create session again
+
+  const [chatOpen, toggleChat] = useState(true);
+  const [messages, setMessages] = useState([]);
+
+  function addMessage(message){
+    setMessages(messages => [message, ...messages] )
+  }
+
+  function handleClick(){
+    toggleChat(!chatOpen);
+  }
+
   return (
-    // fix on click
-    <div className="chat-container" onClick={()=>toggleChat(!chatOpen)}>
-      {chatOpen && <ChatBox />}
-      <ChatButton />
+    <div className="chat-container">
+      {chatOpen && <ChatBox addMessage={addMessage} messages={messages} />}
+      <ChatButton handleClick={handleClick} />
     </div>
   );
 }

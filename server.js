@@ -8,8 +8,6 @@ const sessions = require('./controllers/sessions');
 
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
-require('dotenv').config();
-
 const AssistantV2 = require('ibm-watson/assistant/v2');
 const { IamAuthenticator } = require('ibm-watson/auth');
 
