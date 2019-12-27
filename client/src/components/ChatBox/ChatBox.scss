@@ -38,3 +38,19 @@
     transform: scale(1.05);
   }
 }
+
+.msg-history {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  overflow-y: scroll;
+}
+
+.bot-msg {
+  align-self: flex-start;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+

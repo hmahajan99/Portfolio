@@ -9,13 +9,13 @@ const sendMessage = (req, res, assistant) => {
       }
     })
     .then(assistantResponse => {
-      console.log("Response to message",JSON.stringify(assistantResponse, null, 2));
+      // console.log("Response to message",JSON.stringify(assistantResponse, null, 2));
       let reply = assistantResponse.result.output.generic[0].text;
       res.json({reply});
     })
     .catch(err => {
       console.log("error sending message",err);
-      res.json("error sending message");
+      res.status(400).json({reply: "Error sending message"});
     });
   
 }
