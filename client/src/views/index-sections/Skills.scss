@@ -1,0 +1,28 @@
+.skills {
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.skills-title {
+  color: #ddcbcb;
+  font-family: cursive;
+  font-weight: bold;
+  margin-bottom: 5px;  
+  font-size: 120px;
+  @media screen and (max-width: 800px) {
+    font-size: 60px;
+  }
+  span {
+    font-size: 200px;
+    @media screen and (max-width: 800px) {
+      font-size: 90px;
+    }
+  }
+}
+
+.skills-icons {
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+}
