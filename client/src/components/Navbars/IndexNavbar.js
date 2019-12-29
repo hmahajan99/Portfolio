@@ -113,7 +113,7 @@ function IndexNavbar() {
             </NavItem>
             <NavItem>
               <NavLink
-                href="https://drive.google.com/open?id=1LEHYoP7Oy-OTld-6SKPr-FPsAakHs1of"
+                href="https://www.linkedin.com/in/hmahajan99"
                 target="_blank"
               >
                 <i className="fa nc-icon nc-book-bookmark" />Resume

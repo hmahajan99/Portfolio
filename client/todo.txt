@@ -1,0 +1,14 @@
+*** IMPROVE BOT
+
+CHAT V1
+1. make a check for invalid session (5 min timeout --- error msg) => create session again
+2. fix overflow on verrrrrrrrrrrrrrrrylongwooooooooooooord
+3. delete session
+? sace chat locally
+
+? DARK MODE ----XXXXXXX
+
+PROJECT + SKILLS
+
+? CHESSAI,MUSIC,RANDOM QUOTES(?firebase)
+

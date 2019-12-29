@@ -59,7 +59,7 @@ function InputBox({inputText, setInputText, keyPressed, sendMessage}) {
 
 function ChatBox ({ addMessage, messages, sessionId }) {
 
-  const [inputText, setInputText] = useState("Type something...");
+  const [inputText, setInputText] = useState("Hi...");
 
   function keyPressed(event) {
     if (event.key === "Enter") {
@@ -70,6 +70,7 @@ function ChatBox ({ addMessage, messages, sessionId }) {
   function sendMessage(){
     let message = inputText;
     addMessage({text: message, sender: "user"});
+    setInputText("")
     fetch('http://localhost:5000/message', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
