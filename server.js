@@ -13,14 +13,19 @@ if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
 const AssistantV2 = require('ibm-watson/assistant/v2');
 const { IamAuthenticator } = require('ibm-watson/auth');
+const assistant;
 
-const assistant = new AssistantV2({
-  version: process.env.WATSON_VERSION,
-  authenticator: new IamAuthenticator({
-    apikey: process.env.WATSON_APIKEY,
-  }),
-  url: process.env.WATSON_URL,
-});
+try {
+  assistant = new AssistantV2({
+    version: process.env.WATSON_VERSION,
+    authenticator: new IamAuthenticator({
+      apikey: process.env.WATSON_APIKEY,
+    }),
+    url: process.env.WATSON_URL,
+  });  
+} catch(err) {
+  console.log(err);
+}
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -36,7 +41,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client/build')));
 
   app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));heroku 
   });
 }
 
