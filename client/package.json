@@ -2,6 +2,7 @@
   "name": "paper-kit-react",
   "version": "1.0.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "classnames": "2.2.6",
     "moment": "2.24.0",

@@ -12,6 +12,8 @@ import {
   Container
 } from "reactstrap";
 
+import "./MyNavbar.scss";
+
 function MyNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
@@ -34,6 +36,7 @@ function MyNavbar() {
       ) {
         setNavbarColor("navbar-transparent");
       }
+      
     };
 
     window.addEventListener("scroll", updateNavbarColor);

@@ -24,7 +24,7 @@ function ChatContainer () {
   }
 
   function createNewSession(){
-    fetch('http://localhost:5000/createsession', {
+    fetch('/createsession', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
     })

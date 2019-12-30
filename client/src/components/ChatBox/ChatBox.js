@@ -71,7 +71,7 @@ function ChatBox ({ addMessage, messages, sessionId }) {
     let message = inputText;
     addMessage({text: message, sender: "user"});
     setInputText("")
-    fetch('http://localhost:5000/message', {
+    fetch('/message', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
