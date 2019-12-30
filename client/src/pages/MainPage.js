@@ -17,7 +17,7 @@ function MainPage() {
     };
   });
   return (
-    <>
+    <div>
       <MyNavbar />
       <Header />
       <div className="main">
@@ -27,7 +27,7 @@ function MainPage() {
         <Contact />
         <Footer />
       </div>
-    </>
+    </div>
   );
 }
 

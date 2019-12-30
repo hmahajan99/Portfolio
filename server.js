@@ -40,8 +40,6 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-
-app.get('/', (req, res)=> { res.send("ITS WORKING") });
 app.post('/message', (req, res) => { message.sendMessage(req, res, assistant) });
 app.post('/createsession', (req, res) => { sessions.createSession(req, res, assistant) });
 app.post('/deletesession', (req, res) => { sessions.deleteSession(req, res, assistant) });

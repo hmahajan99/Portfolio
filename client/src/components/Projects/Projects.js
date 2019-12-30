@@ -12,7 +12,7 @@ import "./Projects.scss";
 function Projects() {
   const [seeMore, setSeeMore] = useState(false);
   return (
-    <>
+    <div>
       <div className="section section-dark projects">
         <h1 className="projects-title"><span>P</span>rojects</h1>
         <div className="projects-list">
@@ -195,7 +195,7 @@ function Projects() {
         <path fill="#0b1011" fill-opacity="1" d="M0,192L80,165.3C160,139,320,85,480,106.7C640,128,800,224,960,218.7C1120,213,1280,107,1360,53.3L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
         </path>
       </svg>
-    </>
+    </div>
 
   );
 }

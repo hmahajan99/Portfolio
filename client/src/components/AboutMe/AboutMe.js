@@ -4,7 +4,7 @@ import "./AboutMe.scss"
 
 function AboutMe() {
   return (
-    <>
+    <div>
       <div className="about-me">
         <div className="about-me-text">
           <h1><span>A</span>bout Me</h1>
@@ -30,7 +30,7 @@ function AboutMe() {
         <p className="about-info-q">Q) Favourite framework / programming language ? </p>
         <p className="about-info-a">Language agnostic, depends on use case </p>
       </div>
-    </>
+    </div>
   );
 }
 

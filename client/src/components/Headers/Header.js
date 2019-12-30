@@ -6,7 +6,7 @@ import "./Header.scss"
 
 function Header() {
   return (
-    <>
+    <div>
       <div
         className="page-header section-dark"
         style={{
@@ -47,7 +47,7 @@ function Header() {
           }}
         />
       </div>
-    </>
+    </div>
   );
 }
 

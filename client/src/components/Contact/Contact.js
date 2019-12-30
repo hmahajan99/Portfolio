@@ -4,7 +4,7 @@ import { Button, Container, Row, Col, UncontrolledTooltip } from "reactstrap";
 
 function Contact() {
   return (
-    <>
+    <div>
       <div className="section">
         <Container className="text-center">
           <Row className="justify-content-md-center sharing-area text-center">
@@ -41,7 +41,7 @@ function Contact() {
           </Row>
         </Container>
       </div>
-    </>
+    </div>
   );
 }
 
