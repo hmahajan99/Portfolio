@@ -13,7 +13,7 @@ if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
 const AssistantV2 = require('ibm-watson/assistant/v2');
 const { IamAuthenticator } = require('ibm-watson/auth');
-const assistant;
+let assistant;
 
 try {
   assistant = new AssistantV2({
