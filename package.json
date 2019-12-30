@@ -1,6 +1,10 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.16.1",
+    "npm": "6.9.0"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -34,5 +38,6 @@
   "devDependencies": {
     "concurrently": "^4.0.1",
     "nodemon": "^1.19.3"
-  }
+  },
+
 }
