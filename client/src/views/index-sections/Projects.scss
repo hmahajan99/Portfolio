@@ -1,0 +1,27 @@
+.projects {
+  text-align: center;
+}
+
+.projects-title {
+  color: lightblue;
+  padding-top: 30px;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 120px;
+  @media screen and (max-width: 800px) {
+    font-size: 60px;
+  }
+  span {
+    font-size: 200px;
+    font-style: italic;
+    @media screen and (max-width: 800px) {
+      font-size: 90px;
+    }
+  }
+
+}
+
+.projects-list {
+  display: flex;
+  justify-content: space-evenly;
+}

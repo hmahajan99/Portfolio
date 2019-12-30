@@ -12,6 +12,10 @@ import "./Skills.scss"
 function Skills() {
   return (
     <>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#0b1011" fill-opacity="1" d="M0,128L80,154.7C160,181,320,235,480,224C640,213,800,139,960,138.7C1120,139,1280,213,1360,250.7L1440,288L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+        </path>
+      </svg>
       <div className="section section-dark section-nucleo-icons skills">
         <Container style={{marginBottom: "30px"}} >
           <Row>
@@ -65,7 +69,7 @@ function Skills() {
                 </p>
                 <Button className="btn-link" color="info" href="https://www.codechef.com/users/hmahajan" target="_blank">Codechef</Button>
                 <br/>
-                <Button className="btn-link" color="info" style={{cursor: "default", marginBottom: "50px"}}>
+                <Button className="btn-link" color="info" style={{cursor: "default", marginBottom: "15px"}}>
                   _______
                 </Button>
               </div>
@@ -86,7 +90,7 @@ function Skills() {
                   <strong>Java</strong> (Novice) <br/>
                   <strong>R</strong> (Novice) <br/>
                 </p>
-                <Button className="btn-link" color="info" style={{cursor: "default", marginBottom: "50px"}}>
+                <Button className="btn-link" color="info" style={{cursor: "default", marginBottom: "15px"}}>
                   _______
                 </Button>
               </div>
@@ -113,7 +117,7 @@ function Skills() {
                   <strong>Docker</strong> <br/>
                   <strong>Heroku</strong> <br/>
                 </p>
-                <Button className="btn-link" color="info" style={{cursor: "default", marginBottom: "50px"}}>
+                <Button className="btn-link" color="info" style={{cursor: "default", marginBottom: "15px"}}>
                   _______
                 </Button>
               </div>
@@ -129,7 +133,7 @@ function Skills() {
                 <p>
                   Working knowledge of various machine learning algorithms
                 </p>
-                <Button className="btn-link" color="info" style={{cursor: "default", marginBottom: "50px"}}>
+                <Button className="btn-link" color="info" style={{cursor: "default", marginBottom: "15px"}}>
                   _______
                 </Button>
               </div>
