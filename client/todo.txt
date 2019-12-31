@@ -1,3 +1,5 @@
+Change font:  cursive to generic one
+
 *** IMPROVE BOT
 
 CHAT V1

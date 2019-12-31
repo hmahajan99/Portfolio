@@ -12,7 +12,7 @@
   align-items: center;
   text-align: center;
   h1 {
-    font-family: cursive;
+    font-family: 'Dancing Script', cursive;
     font-weight: bold;
     margin-bottom: 5px;  
     font-size: 120px;
@@ -28,7 +28,7 @@
   }
   h5 {
     font-size: 30px;
-    font-family: cursive;
+    font-family: 'Dancing Script', cursive;
     font-weight: bolder;
     margin: 0;
     @media screen and (max-width: 800px) {
@@ -48,12 +48,12 @@
   text-align: center;
   margin-top: 50px;
   .about-info-q {
-    font-family: cursive;
-    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
     font-weight: bold;
   }
   .about-info-a {
-    font-family: cursive;
-    font-size: 17px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
   }
 }
