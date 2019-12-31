@@ -53,6 +53,7 @@ function Projects() {
                     E-commerce progressive web app made with 
                     <strong> React</strong>, 
                     <strong> Redux</strong>,
+                    <strong> Express</strong>,
                     <strong> Firebase</strong> and
                     <strong> Stripe API</strong>
                   </p>
@@ -149,7 +150,7 @@ function Projects() {
                     <div className="description">
                       <h4 className="info-title" style={{marginBottom: "5px"}}>Portfolio Site</h4>
                       <p>
-                        My portfolio site built with <strong>React</strong>. Comes with a <strong>chatbot</strong> of ME, made using <strong>IBM Watson</strong>.
+                        My portfolio site built with <strong>React</strong> and <strong>Express</strong>. Comes with a <strong>chatbot</strong> of ME, made using <strong>IBM Watson</strong>.
                       </p>
                       <Button className="btn-link" color="info" href="https://github.com/hmahajan99/Portfolio" target="_blank">Github</Button>
                       <Button className="btn-link" color="info" >Website</Button>
