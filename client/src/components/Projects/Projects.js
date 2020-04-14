@@ -26,14 +26,14 @@ function Projects() {
                 <div className="description">
                   <h4 className="info-title" style={{marginBottom: "5px"}}>Mastermind v2</h4>
                   <p>
-                    Second iteration of Mastermind, a web application for detecting faces in images built using 
+                    Second iteration of Mastermind, a web application for analyzing images built using 
                     <strong> React</strong>, 
                     <strong> Express</strong>,
                     <strong> PostgreSQL</strong>,
                     <strong> Redis</strong> and
                     <strong> Docker</strong>
                   </p>
-                  <Button className="btn-link" color="info" href="https://github.com/hmahajan99/Mastermind2-backend" target="_blank">Github</Button>
+                  <Button className="btn-link" color="info" href="https://github.com/hmahajan99/Mastermind-v2-Backend" target="_blank">Github</Button>
                   <Button className="btn-link" color="info" href="https://mastermind2.herokuapp.com/" target="_blank">Website</Button>
                   <br/>
                   <Button className="btn-link" color="info" style={{cursor: "default", marginBottom: "40px"}}>
