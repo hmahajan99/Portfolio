@@ -84,10 +84,11 @@ function Skills() {
                   <h4 className="info-title" style={{marginBottom: "5px"}}>Languages</h4>
                   <p>
                     <strong>C++</strong> (Proficient) <br/>
+                    <strong>Java</strong> <br/>
                     <strong>Javascript</strong> <br/>
+                    <strong>Typescript</strong> <br/>
                     <strong>Python</strong> <br/>
                     <strong>C</strong> <br/>
-                    <strong>Java</strong> (Novice) <br/>
                     <strong>R</strong> (Novice) <br/>
                   </p>
                   <Button className="btn-link" color="info" style={{cursor: "default", marginBottom: "15px"}}>
@@ -106,12 +107,12 @@ function Skills() {
                   <p className="description">
                     <strong>HTML</strong> <br/>
                     <strong>CSS</strong> <br/>
-                    <strong>Javascript</strong> <br/>
-                    <strong>React + Redux</strong> <br/>
+                    <strong>React & Redux</strong> <br/>
                     <strong>Node.js</strong> <br/>
                     <strong>Express</strong> <br/>
+                    <strong>Dropwizard</strong> <br/>
                     <strong>Flask</strong> <br/>
-                    <strong>PostgreSQL</strong> <br/>
+                    <strong>MySQL & PostgreSQL</strong> <br/>
                     <strong>Firebase</strong> <br/>
                     <strong>Redis</strong> <br/>
                     <strong>Docker</strong> <br/>

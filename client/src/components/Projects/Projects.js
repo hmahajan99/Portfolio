@@ -134,7 +134,7 @@ function Projects() {
                         Implemented Decision Tree Classifier from scratch in <strong>Python</strong>.
                         Added a feature to export the tree built using the training data into a <strong>PDF</strong>.
                       </p>
-                      <Button className="btn-link" color="info" href="https://github.com/hmahajan99/DecisionTreeImplementation" target="_blank">Github</Button>
+                      <Button className="btn-link" color="info" href="https://github.com/hmahajan99/Decision-Tree-Implementation" target="_blank">Github</Button>
                       <br/>
                       <Button className="btn-link" color="info" style={{cursor: "default", marginBottom: "40px"}}>
                         _______
